@@ -62,7 +62,8 @@ module.exports = function (grunt) {
             }),
             testPaths   : _.map(testPaths, function (testPath) {
                 return path.relative(dirname, testPath);
-            })
+            }),
+            config: config
         });
 
         grunt.file.write(htmlPath, html);
